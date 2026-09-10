@@ -1,0 +1,600 @@
+<!-- ==========================================================================
+     VILA KING • Formulário de qualificação
+     Cole este bloco inteiro num widget HTML do Elementor.
+     Tudo é escopado em #vk-app, então não vaza CSS pro resto do site.
+     Configuração fica no bloco VK_CONFIG lá embaixo.
+     ========================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div id="vk-app" role="form" aria-label="Formulário de qualificação Vila King">
+
+  <div class="vk-grid" aria-hidden="true"></div>
+  <div class="vk-glow" aria-hidden="true"></div>
+
+  <div class="vk-progress" aria-hidden="true"><span class="vk-progress-fill"></span></div>
+
+  <div class="vk-stage">
+    <div class="vk-card">
+
+      <!-- ETAPA 0 • abertura -->
+      <section class="vk-step vk-step--intro is-active" data-step="0">
+        <img class="vk-logo" src="https://vilaking.pro/wp-content/uploads/2025/12/%C2%AEcsasa.png" alt="Vila King" loading="eager" decoding="async">
+        <h1 class="vk-display vk-display--duas"><span>Página de venda</span><span>de alta conversão</span></h1>
+        <p class="vk-lead">Quatro perguntas rápidas e a gente já chega na conversa sabendo qual página o seu negócio precisa.</p>
+        <button type="button" class="vk-btn vk-btn--primary" data-action="next">Começar</button>
+        <p class="vk-note">Leva 1 minuto</p>
+      </section>
+
+      <!-- ETAPA 1 • nome -->
+      <section class="vk-step" data-step="1">
+        <p class="vk-index"><span>01</span> de 04</p>
+        <h2 class="vk-question"><label for="vk-nome">Como você se chama?</label></h2>
+        <input type="text" id="vk-nome" class="vk-input" name="nome" placeholder="Seu nome" autocomplete="given-name" spellcheck="false">
+        <p class="vk-error" data-error-for="vk-nome"></p>
+        <div class="vk-actions">
+          <button type="button" class="vk-btn vk-btn--primary" data-action="next">Continuar</button>
+          <span class="vk-hint">ou pressione <kbd>Enter</kbd></span>
+        </div>
+      </section>
+
+      <!-- ETAPA 2 • segmento -->
+      <section class="vk-step" data-step="2">
+        <p class="vk-index"><span>02</span> de 04</p>
+        <h2 class="vk-question">Em que mercado você atua?</h2>
+        <div class="vk-options" role="radiogroup" aria-label="Segmento" data-field="segmento">
+          <button type="button" class="vk-option" data-value="Negócio local / profissional liberal"><span class="vk-key">A</span>Negócio local ou profissional liberal</button>
+          <button type="button" class="vk-option" data-value="Clínica / consultório"><span class="vk-key">B</span>Clínica ou consultório</button>
+          <button type="button" class="vk-option" data-value="Produto físico / e-commerce"><span class="vk-key">C</span>Produto físico ou e-commerce</button>
+          <button type="button" class="vk-option" data-value="Infoproduto / evento"><span class="vk-key">D</span>Infoproduto, mentoria ou evento</button>
+          <button type="button" class="vk-option" data-value="Outro"><span class="vk-key">E</span>Outro</button>
+        </div>
+        <p class="vk-error" data-error-for="segmento"></p>
+      </section>
+
+      <!-- ETAPA 3 • origem dos clientes -->
+      <section class="vk-step" data-step="3">
+        <p class="vk-index"><span>03</span> de 04</p>
+        <h2 class="vk-question">Como está sua página hoje?</h2>
+        <div class="vk-options" role="radiogroup" aria-label="Situação da página" data-field="pagina_atual">
+          <button type="button" class="vk-option" data-value="Não tem página"><span class="vk-key">A</span>Ainda não tenho página nenhuma</button>
+          <button type="button" class="vk-option" data-value="Só site institucional"><span class="vk-key">B</span>Tenho site institucional, mas não vende</button>
+          <button type="button" class="vk-option" data-value="Página convertendo pouco"><span class="vk-key">C</span>Tenho página, mas converte pouco</button>
+          <button type="button" class="vk-option" data-value="Página + tráfego rodando"><span class="vk-key">D</span>Tenho página e já rodo tráfego</button>
+          <button type="button" class="vk-option" data-value="Vendo só no direct e WhatsApp"><span class="vk-key">E</span>Vendo tudo no direct e no WhatsApp</button>
+        </div>
+        <p class="vk-error" data-error-for="pagina_atual"></p>
+      </section>
+
+      <!-- ETAPA 4 • whatsapp -->
+      <section class="vk-step" data-step="4">
+        <p class="vk-index"><span>04</span> de 04</p>
+        <h2 class="vk-question"><label for="vk-whats">Para onde mandamos os exemplos?</label></h2>
+        <p class="vk-sub">No WhatsApp a gente confirma o horário e manda páginas que já fizemos para o seu mercado.</p>
+        <div class="vk-phone">
+          <span class="vk-ddi">BR +55</span>
+          <input type="tel" id="vk-whats" class="vk-input vk-input--phone" name="whatsapp" placeholder="(11) 91234-5678" inputmode="numeric" autocomplete="tel-national">
+        </div>
+        <p class="vk-error" data-error-for="vk-whats"></p>
+        <div class="vk-actions">
+          <button type="button" class="vk-btn vk-btn--primary" data-action="next">Ver meus horários</button>
+        </div>
+      </section>
+
+      <!-- ETAPA 5 • fechamento -->
+      <section class="vk-step vk-step--final" data-step="5">
+        <img class="vk-logo vk-logo--sm" src="https://vilaking.pro/wp-content/uploads/2025/12/%C2%AEcsasa.png" alt="Vila King" loading="lazy" decoding="async">
+        <p class="vk-stamp">Respostas recebidas</p>
+        <h2 class="vk-display vk-display--sm">Falta escolher o horário, <span data-slot="nome">tudo certo</span>.</h2>
+        <p class="vk-lead">São 30 minutos objetivos. A gente mostra páginas do seu mercado, a estrutura que vai ser escrita para você e o valor. Isso só apresentamos ao vivo, por isso a agenda.</p>
+        <a class="vk-btn vk-btn--primary vk-btn--wide" data-action="schedule" href="#" target="_blank" rel="noopener">Escolher meu horário</a>
+        <ul class="vk-proof">
+          <li><strong>Copy escrita do zero</strong><span>para vender, não para enfeitar</span></li>
+          <li><strong>Reunião de alinhamento</strong><span>antes da primeira linha de código</span></li>
+          <li><strong>Ajustes ilimitados</strong><span>até a página ficar do seu jeito</span></li>
+          <li><strong>Entrega responsiva</strong><span>implementada e no ar, mobile e desktop</span></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <button type="button" class="vk-back" data-action="back" aria-label="Voltar para a pergunta anterior">Voltar</button>
+  </div>
+</div>
+
+<style>
+/* ===== Tokens ============================================================ */
+#vk-app{
+  --ink:#0A0908;
+  --ink-2:rgba(255,253,248,.035);
+  --ink-3:rgba(255,253,248,.06);
+  --line:rgba(198,161,91,.24);
+  --gold:#C6A15B;
+  --gold-soft:#E4CFA1;
+  --paper:#F5F1E9;
+  --muted:#8E877D;
+
+  --font-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --font-ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+  --pad:clamp(22px,5vw,56px);
+  --radius:12px;
+  --mx:50%; --my:35%;
+  --rx:0deg; --ry:0deg;
+
+  position:relative;
+  isolation:isolate;
+  box-sizing:border-box;
+
+  /* sangra pra largura total, mesmo dentro de coluna do Elementor */
+  width:100vw;max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--font-ui);
+  font-size:16px;
+  line-height:1.5;
+  text-align:center;
+  overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+#vk-app *,#vk-app *::before,#vk-app *::after{box-sizing:border-box}
+#vk-app p,#vk-app h1,#vk-app h2,#vk-app ul{margin:0}
+#vk-app ul{list-style:none;padding:0}
+#vk-app img{max-width:100%;height:auto;display:block}
+#vk-app button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+#vk-app a{color:inherit;text-decoration:none}
+
+/* ===== Fundo: grid + luz que segue o cursor =============================== */
+#vk-app .vk-grid{
+  position:absolute;inset:-2px;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(to right, rgba(245,241,233,.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245,241,233,.055) 1px, transparent 1px);
+  background-size:clamp(38px,6vw,64px) clamp(38px,6vw,64px);
+  -webkit-mask-image:radial-gradient(150% 120% at 50% 40%, #000 20%, transparent 92%);
+          mask-image:radial-gradient(150% 120% at 50% 40%, #000 20%, transparent 92%);
+}
+#vk-app .vk-glow{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(340px circle at var(--mx) var(--my), rgba(198,161,91,.16), transparent 70%);
+  opacity:0;transition:opacity .5s ease;
+}
+#vk-app.is-hover .vk-glow{opacity:1}
+#vk-app::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(90% 70% at 50% -15%, rgba(198,161,91,.10), transparent 60%);
+}
+
+/* ===== Palco 3D ========================================================== */
+#vk-app .vk-stage{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:640px;
+  min-height:100svh;
+  padding:calc(var(--pad) + 20px) var(--pad) calc(var(--pad) + 56px);
+  perspective:1500px;
+}
+#vk-app .vk-card{
+  width:100%;max-width:660px;margin:0 auto;
+  transform:rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style:preserve-3d;
+  transition:transform .5s cubic-bezier(.2,.7,.3,1);
+  will-change:transform;
+}
+#vk-app.is-tracking .vk-card{transition:transform .12s ease-out}
+#vk-app .vk-logo,
+#vk-app .vk-display,
+#vk-app .vk-question,
+#vk-app .vk-stamp{transform:translateZ(46px)}
+#vk-app .vk-lead,
+#vk-app .vk-sub,
+#vk-app .vk-index{transform:translateZ(28px)}
+#vk-app .vk-options,
+#vk-app .vk-input,
+#vk-app .vk-phone,
+#vk-app .vk-actions,
+#vk-app .vk-btn--wide,
+#vk-app .vk-proof{transform:translateZ(18px)}
+
+/* ===== Progresso ========================================================= */
+#vk-app .vk-progress{
+  position:absolute;top:0;left:0;right:0;z-index:2;
+  height:2px;background:rgba(245,241,233,.07);
+}
+#vk-app .vk-progress-fill{
+  display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-soft) 100%);
+  box-shadow:0 0 14px rgba(198,161,91,.5);
+  transition:width .5s cubic-bezier(.2,.7,.3,1);
+}
+
+/* ===== Etapas ============================================================ */
+#vk-app .vk-step{display:none}
+#vk-app .vk-step.is-active{display:block;animation:vk-in .45s cubic-bezier(.2,.7,.3,1) both}
+@keyframes vk-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ===== Tipografia ======================================================== */
+#vk-app .vk-display{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.8rem,7.4vw,3.5rem);
+  line-height:1.1;letter-spacing:-.015em;
+  max-width:18ch;margin-inline:auto;
+  text-wrap:balance;
+}
+#vk-app .vk-display--duas{max-width:none;text-wrap:nowrap}
+#vk-app .vk-display--duas span{display:block;white-space:nowrap}
+#vk-app .vk-display--sm{font-size:clamp(1.8rem,5vw,2.7rem);max-width:21ch}
+#vk-app .vk-question{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.7rem,5vw,2.45rem);
+  line-height:1.14;letter-spacing:-.005em;
+  max-width:21ch;margin:0 auto 28px;
+  text-wrap:balance;
+}
+#vk-app .vk-question label{display:block;cursor:default}
+#vk-app .vk-lead{
+  margin:18px auto 0;max-width:48ch;
+  color:rgba(245,241,233,.62);
+  font-size:clamp(.96rem,2.6vw,1.06rem);
+  text-wrap:pretty;
+}
+#vk-app .vk-sub{
+  margin:-16px auto 26px;max-width:44ch;
+  color:var(--muted);font-size:.92rem;text-wrap:pretty;
+}
+#vk-app .vk-index{margin-bottom:16px;color:var(--muted);font-size:.8rem;letter-spacing:.08em}
+#vk-app .vk-index span{color:var(--gold)}
+#vk-app .vk-note{margin-top:18px;color:var(--muted);font-size:.85rem}
+#vk-app .vk-hint{color:var(--muted);font-size:.82rem}
+#vk-app .vk-hint kbd{font:inherit;border:1px solid var(--line);border-radius:4px;padding:1px 5px;color:var(--gold-soft)}
+
+/* ===== Logo ============================================================== */
+#vk-app .vk-logo{
+  width:clamp(112px,20vw,150px);
+  margin:0 auto 34px;
+  filter:drop-shadow(0 10px 26px rgba(198,161,91,.28));
+}
+#vk-app .vk-logo--sm{width:clamp(86px,14vw,104px);margin-bottom:24px}
+
+/* ===== Campos ============================================================ */
+#vk-app .vk-input{
+  width:100%;max-width:440px;margin:0 auto;
+  padding:18px 20px;text-align:center;
+  background:var(--ink-2);
+  border:1px solid rgba(245,241,233,.10);
+  border-radius:var(--radius);
+  color:var(--paper);font-family:var(--font-ui);font-size:1.05rem;
+  backdrop-filter:blur(2px);
+  transition:border-color .2s,background .2s,box-shadow .2s;
+}
+#vk-app .vk-input::placeholder{color:#5E5850}
+#vk-app .vk-input:focus{
+  outline:none;border-color:var(--gold);background:var(--ink-3);
+  box-shadow:0 0 0 4px rgba(198,161,91,.10);
+}
+#vk-app .vk-phone{
+  display:flex;align-items:stretch;
+  width:100%;max-width:400px;margin:0 auto;
+  background:var(--ink-2);
+  border:1px solid rgba(245,241,233,.10);
+  border-radius:var(--radius);overflow:hidden;
+  transition:border-color .2s,box-shadow .2s;
+}
+#vk-app .vk-phone:focus-within{border-color:var(--gold);box-shadow:0 0 0 4px rgba(198,161,91,.10)}
+#vk-app .vk-ddi{
+  display:flex;align-items:center;padding:0 16px;
+  color:var(--gold-soft);font-size:.9rem;letter-spacing:.04em;
+  border-right:1px solid rgba(245,241,233,.08);white-space:nowrap;
+}
+#vk-app .vk-input--phone{border:0;border-radius:0;background:transparent;max-width:none;text-align:left}
+#vk-app .vk-input--phone:focus{background:transparent;box-shadow:none}
+
+/* ===== Opções ============================================================ */
+#vk-app .vk-options{
+  display:flex;flex-direction:column;gap:10px;
+  width:100%;max-width:520px;margin:0 auto;
+}
+#vk-app .vk-option{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  width:100%;min-height:58px;
+  padding:14px 52px;text-align:center;
+  background:var(--ink-2);
+  border:1px solid rgba(245,241,233,.09);
+  border-radius:var(--radius);
+  font-size:clamp(.94rem,2.6vw,1rem);line-height:1.35;
+  transition:border-color .18s,background .18s,transform .18s,box-shadow .18s;
+}
+#vk-app .vk-option:hover,#vk-app .vk-option:focus-visible{
+  border-color:var(--line);background:var(--ink-3);outline:none;transform:translateY(-2px);
+}
+#vk-app .vk-option.is-picked{
+  border-color:var(--gold);background:rgba(198,161,91,.10);
+  box-shadow:0 10px 30px -18px rgba(198,161,91,.9);
+}
+#vk-app .vk-key{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;display:grid;place-items:center;
+  border:1px solid rgba(245,241,233,.14);border-radius:6px;
+  font-size:.75rem;color:var(--muted);
+}
+#vk-app .vk-option.is-picked .vk-key{border-color:var(--gold);color:var(--gold);background:rgba(198,161,91,.14)}
+
+/* ===== Botões ============================================================ */
+#vk-app .vk-actions{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;margin-top:28px;flex-wrap:wrap;
+}
+#vk-app .vk-btn{
+  display:inline-block;padding:16px 38px;border-radius:var(--radius);
+  font-size:1rem;font-weight:500;letter-spacing:.01em;
+  transition:transform .18s,box-shadow .18s,filter .18s;
+}
+#vk-app .vk-btn--primary{
+  background:linear-gradient(180deg,var(--gold-soft) 0%,var(--gold) 100%);
+  color:#161208;box-shadow:0 14px 34px -16px rgba(198,161,91,.85);
+}
+#vk-app .vk-btn--primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+#vk-app .vk-btn--primary:active{transform:translateY(0)}
+#vk-app .vk-btn--wide{
+  display:block;width:100%;max-width:420px;
+  margin:32px auto 0;padding:20px 34px;font-size:1.05rem;
+}
+#vk-app .vk-btn:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+#vk-app .vk-step--intro .vk-btn--primary{margin-top:36px}
+
+#vk-app .vk-back{
+  position:absolute;left:50%;bottom:calc(var(--pad) - 8px);
+  transform:translateX(-50%);
+  padding:10px 4px;color:var(--muted);font-size:.85rem;
+  opacity:0;pointer-events:none;transition:opacity .25s,color .2s;
+}
+#vk-app .vk-back::before{
+  content:"";display:inline-block;width:18px;height:1px;
+  background:currentColor;vertical-align:middle;margin-right:8px;
+}
+#vk-app .vk-back.is-on{opacity:1;pointer-events:auto}
+#vk-app .vk-back:hover{color:var(--gold-soft)}
+
+/* ===== Erro ============================================================== */
+#vk-app .vk-error{min-height:22px;margin-top:12px;color:#D98B6A;font-size:.85rem}
+
+/* ===== Fechamento ======================================================== */
+#vk-app .vk-stamp{
+  display:inline-block;margin-bottom:22px;padding:7px 18px;
+  border:1px solid var(--line);border-radius:999px;
+  color:var(--gold-soft);font-size:.82rem;letter-spacing:.04em;
+}
+#vk-app .vk-proof{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;
+  max-width:660px;margin:44px auto 0;
+}
+#vk-app .vk-proof li{
+  padding:18px 14px;
+  border:1px solid rgba(245,241,233,.08);border-radius:var(--radius);
+  background:var(--ink-2);
+}
+#vk-app .vk-proof strong{display:block;color:var(--paper);font-weight:500;font-size:1rem}
+#vk-app .vk-proof span{display:block;margin-top:6px;color:var(--muted);font-size:.82rem;line-height:1.35}
+
+/* ===== Responsivo ======================================================== */
+@media (max-width:860px){
+  #vk-app .vk-card{max-width:560px}
+}
+@media (max-width:640px){
+  #vk-app .vk-stage{
+    min-height:100svh;
+    padding-bottom:calc(var(--pad) + 64px);
+  }
+  #vk-app .vk-question{margin-bottom:24px}
+  #vk-app .vk-option{padding:14px 46px;min-height:56px}
+  #vk-app .vk-btn{width:100%;text-align:center;padding:17px 24px}
+  #vk-app .vk-actions{gap:12px}
+  #vk-app .vk-hint{display:none}
+  #vk-app .vk-proof{grid-template-columns:1fr;gap:10px;margin-top:34px}
+  #vk-app .vk-proof li{display:flex;align-items:baseline;gap:10px;justify-content:center;padding:14px}
+  #vk-app .vk-proof span{margin-top:0}
+}
+@media (max-width:400px){
+  #vk-app .vk-key{display:none}
+  #vk-app .vk-option{padding:14px 16px}
+  #vk-app .vk-ddi{padding:0 12px;font-size:.82rem}
+}
+@media (hover:none){
+  #vk-app .vk-card{transform:none!important}
+  #vk-app .vk-glow{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  #vk-app *,#vk-app *::before{animation:none!important;transition:none!important}
+  #vk-app .vk-card{transform:none!important}
+}
+</style>
+
+<script>
+(function(){
+  /* =====================================================================
+     CONFIGURAÇÃO • mexa só aqui
+     ===================================================================== */
+  var VK_CONFIG = {
+    agenda: "https://calendly.com/vilaking/diagnostico",
+    webhook: "",
+    salvarAntesDaAgenda: true,
+    tilt: 7          // intensidade do 3D em graus. 0 desliga.
+  };
+  /* ===================================================================== */
+
+  var app = document.getElementById("vk-app");
+  if (!app || app.dataset.vkReady) return;
+  app.dataset.vkReady = "1";
+
+  var steps   = [].slice.call(app.querySelectorAll(".vk-step"));
+  var fill    = app.querySelector(".vk-progress-fill");
+  var backBtn = app.querySelector(".vk-back");
+  var last    = steps.length - 1;
+  var current = 0;
+  var enviado = false;
+
+  var data = { nome:"", segmento:"", pagina_atual:"", whatsapp:"" };
+
+  var qs = new URLSearchParams(window.location.search);
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid"].forEach(function(k){
+    if (qs.get(k)) data[k] = qs.get(k);
+  });
+
+  /* --------------------------------------------------- 3D que segue o mouse */
+  var fino = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+  var calmo = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if (fino && !calmo && VK_CONFIG.tilt > 0){
+    var raf = null, px = 0, py = 0;
+
+    app.addEventListener("pointerenter", function(){
+      app.classList.add("is-hover","is-tracking");
+    });
+
+    app.addEventListener("pointermove", function(e){
+      var r = app.getBoundingClientRect();
+      px = (e.clientX - r.left) / r.width;
+      py = (e.clientY - r.top) / r.height;
+      if (raf) return;
+      raf = requestAnimationFrame(function(){
+        raf = null;
+        app.style.setProperty("--mx", (px * 100).toFixed(1) + "%");
+        app.style.setProperty("--my", (py * 100).toFixed(1) + "%");
+        app.style.setProperty("--ry", ((px - .5) * 2 * VK_CONFIG.tilt).toFixed(2) + "deg");
+        app.style.setProperty("--rx", ((.5 - py) * 2 * VK_CONFIG.tilt * .7).toFixed(2) + "deg");
+      });
+    });
+
+    app.addEventListener("pointerleave", function(){
+      app.classList.remove("is-hover","is-tracking");
+      app.style.setProperty("--rx","0deg");
+      app.style.setProperty("--ry","0deg");
+    });
+  }
+
+  /* --------------------------------------------------- navegação */
+  function go(i){
+    if (i < 0 || i > last) return;
+    steps[current].classList.remove("is-active");
+    current = i;
+    steps[current].classList.add("is-active");
+    fill.style.width = (current / last * 100) + "%";
+    backBtn.classList.toggle("is-on", current > 0 && current < last);
+
+    var field = steps[current].querySelector("input");
+    if (field && fino) setTimeout(function(){ field.focus(); }, 140);
+
+    if (current === last) finalizar();
+
+    var topo = app.getBoundingClientRect().top + window.scrollY - 20;
+    if (window.scrollY > topo) window.scrollTo({ top: topo, behavior: "smooth" });
+  }
+
+  function erro(chave, msg){
+    var el = app.querySelector('[data-error-for="' + chave + '"]');
+    if (el) el.textContent = msg || "";
+  }
+
+  function validar(){
+    if (current === 1){
+      var nome = app.querySelector("#vk-nome").value.trim();
+      if (nome.length < 2){ erro("vk-nome","Escreve seu nome para a gente continuar."); return false; }
+      data.nome = nome; erro("vk-nome",""); return true;
+    }
+    if (current === 4){
+      var raw = app.querySelector("#vk-whats").value.replace(/\D/g,"");
+      if (raw.length < 10 || raw.length > 11){ erro("vk-whats","Faltou um número. Use DDD mais o número completo."); return false; }
+      data.whatsapp = "+55" + raw; erro("vk-whats","");
+      if (VK_CONFIG.salvarAntesDaAgenda) enviar();
+      return true;
+    }
+    return true;
+  }
+
+  function proximo(){ if (validar()) go(current + 1); }
+
+  /* --------------------------------------------------- interação */
+  app.addEventListener("click", function(e){
+    var act = e.target.closest("[data-action]");
+    if (act){
+      var a = act.dataset.action;
+      if (a === "next"){ e.preventDefault(); proximo(); return; }
+      if (a === "back"){ e.preventDefault(); go(current - 1); return; }
+      if (a === "schedule"){ enviar(); return; }
+    }
+    var opt = e.target.closest(".vk-option");
+    if (opt) escolher(opt);
+  });
+
+  function escolher(opt){
+    var group = opt.closest(".vk-options");
+    group.querySelectorAll(".vk-option").forEach(function(b){ b.classList.remove("is-picked"); });
+    opt.classList.add("is-picked");
+    data[group.dataset.field] = opt.dataset.value;
+    erro(group.dataset.field, "");
+    setTimeout(function(){ go(current + 1); }, 280);
+  }
+
+  app.addEventListener("keydown", function(e){
+    if (e.key === "Enter"){
+      if (e.target.classList && e.target.classList.contains("vk-option")) return;
+      e.preventDefault(); proximo(); return;
+    }
+    var group = steps[current].querySelector(".vk-options");
+    if (!group) return;
+    var idx = "abcde".indexOf(e.key.toLowerCase());
+    if (idx === -1) idx = "12345".indexOf(e.key);
+    var opts = group.querySelectorAll(".vk-option");
+    if (idx > -1 && opts[idx]) escolher(opts[idx]);
+  });
+
+  /* --------------------------------------------------- máscara do telefone */
+  var tel = app.querySelector("#vk-whats");
+  tel.addEventListener("input", function(){
+    var v = tel.value.replace(/\D/g,"").slice(0,11);
+    if (v.length > 6)      v = "(" + v.slice(0,2) + ") " + v.slice(2, v.length > 10 ? 7 : 6) + "-" + v.slice(v.length > 10 ? 7 : 6);
+    else if (v.length > 2) v = "(" + v.slice(0,2) + ") " + v.slice(2);
+    else if (v.length)     v = "(" + v;
+    tel.value = v;
+  });
+
+  /* --------------------------------------------------- envio */
+  function enviar(){
+    if (enviado || !VK_CONFIG.webhook) return;
+    enviado = true;
+    var payload = Object.assign({}, data, {
+      pagina: window.location.href,
+      enviado_em: new Date().toISOString()
+    });
+    if (navigator.sendBeacon){
+      navigator.sendBeacon(VK_CONFIG.webhook, new Blob([JSON.stringify(payload)], { type:"application/json" }));
+    } else {
+      fetch(VK_CONFIG.webhook, {
+        method:"POST", mode:"no-cors",
+        headers:{ "Content-Type":"application/json" },
+        body:JSON.stringify(payload)
+      }).catch(function(){});
+    }
+  }
+
+  function finalizar(){
+    var slot = app.querySelector('[data-slot="nome"]');
+    if (slot && data.nome) slot.textContent = data.nome.split(" ")[0];
+
+    var url = VK_CONFIG.agenda;
+    var sep = url.indexOf("?") > -1 ? "&" : "?";
+    url += sep + "name=" + encodeURIComponent(data.nome) +
+           "&a1=" + encodeURIComponent(data.whatsapp) +
+           "&utm_content=" + encodeURIComponent(data.segmento || "");
+    app.querySelector('[data-action="schedule"]').href = url;
+
+    fill.style.width = "100%";
+    enviar();
+  }
+})();
+</script>
